@@ -1,34 +1,25 @@
-import ContentDisplay from "@/components/ContentDisplay";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
+import { Streamdown } from 'streamdown';
 
+/**
+ * All content in this page are only for example, replace with your own feature implementation
+ * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ */
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("executive-summary");
-
-  const handleSectionClick = (id: string) => {
-    setActiveSection(id);
-    // Scroll to top of content area
-    const contentArea = document.getElementById("content-area");
-    if (contentArea) {
-      contentArea.scrollTop = 0;
-    }
-  };
+  // If theme is switchable in App.tsx, we can implement theme toggling like this:
+  // const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden">
-      <Header />
-      
-      <div className="flex flex-1 overflow-hidden">
-        <Sidebar activeSection={activeSection} onSectionClick={handleSectionClick} />
-        
-        <ScrollArea id="content-area" className="flex-1">
-          <main className="container py-12">
-            <ContentDisplay sectionId={activeSection} />
-          </main>
-        </ScrollArea>
-      </div>
+    <div className="min-h-screen flex flex-col">
+      <main>
+        {/* Example: lucide-react for icons */}
+        <Loader2 className="animate-spin" />
+        Example Page
+        {/* Example: Streamdown for markdown rendering */}
+        <Streamdown>Any **markdown** content</Streamdown>
+        <Button variant="default">Example Button</Button>
+      </main>
     </div>
   );
 }
