@@ -1,0 +1,159 @@
+/* Code block styling - Developer Tools Dark Mode */
+pre {
+  position: relative;
+  background-color: #2D2D2D;
+  border: 1px solid #3E3E3E;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  font-family: var(--font-mono);
+  color: #E0E0E0;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem;
+  background-color: #3E3E3E;
+  border: 1px solid #4E4E4E;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-button:hover {
+  background-color: #00D9FF;
+  border-color: #00D9FF;
+}
+
+.copy-button svg {
+  width: 16px;
+  height: 16px;
+  color: #E0E0E0;
+}
+
+.copy-button:hover svg {
+  color: #1E1E1E;
+}
+
+/* Inline code */
+code {
+  background-color: #3E3E3E;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875em;
+  font-family: var(--font-mono);
+  color: #50FA7B;
+}
+
+/* Markdown content styling */
+.prose {
+  color: #E0E0E0;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.prose p {
+  margin: 1rem 0;
+  line-height: 1.75;
+}
+
+.prose ul, .prose ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.5rem 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.prose th {
+  background-color: #2D2D2D;
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #3E3E3E;
+  color: #00D9FF;
+}
+
+.prose td {
+  padding: 0.75rem;
+  border: 1px solid #3E3E3E;
+}
+
+.prose tr:nth-child(even) {
+  background-color: #252525;
+}
+
+.prose blockquote {
+  border-left: 4px solid #00D9FF;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #A0A0A0;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.prose a {
+  color: #00D9FF;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  opacity: 0.8;
+}
+
+/* Syntax highlighting colors (Dracula-inspired) */
+.prose pre code .comment {
+  color: #6272A4;
+}
+
+.prose pre code .keyword {
+  color: #FF79C6;
+}
+
+.prose pre code .string {
+  color: #F1FA8C;
+}
+
+.prose pre code .function {
+  color: #50FA7B;
+}
+
+.prose pre code .number {
+  color: #BD93F9;
+}
+
+.prose pre code .operator {
+  color: #FF79C6;
+}
+
+.prose pre code .variable {
+  color: #8BE9FD;
+}
