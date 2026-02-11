@@ -1,13 +1,11 @@
-/* Code block styling - Developer Tools Dark Mode */
+/* Code block styling */
 pre {
   position: relative;
-  background-color: #2D2D2D;
-  border: 1px solid #3E3E3E;
+  background-color: var(--card);
+  border: 1px solid var(--border);
   padding: 1rem;
   overflow-x: auto;
   margin: 1.5rem 0;
-  max-height: 800px;
-  overflow-y: auto;
 }
 
 pre code {
@@ -16,7 +14,6 @@ pre code {
   font-size: 0.875rem;
   line-height: 1.7;
   font-family: var(--font-mono);
-  color: #E0E0E0;
 }
 
 .copy-button {
@@ -24,8 +21,8 @@ pre code {
   top: 0.75rem;
   right: 0.75rem;
   padding: 0.5rem;
-  background-color: #3E3E3E;
-  border: 1px solid #4E4E4E;
+  background-color: var(--muted);
+  border: 1px solid var(--border);
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
@@ -34,37 +31,31 @@ pre code {
 }
 
 .copy-button:hover {
-  background-color: #00D9FF;
-  border-color: #00D9FF;
+  background-color: var(--accent);
 }
 
 .copy-button svg {
   width: 16px;
   height: 16px;
-  color: #E0E0E0;
-}
-
-.copy-button:hover svg {
-  color: #1E1E1E;
+  color: var(--foreground);
 }
 
 /* Inline code */
 code {
-  background-color: #3E3E3E;
+  background-color: var(--muted);
   padding: 0.125rem 0.375rem;
   font-size: 0.875em;
   font-family: var(--font-mono);
-  color: #50FA7B;
 }
 
 /* Markdown content styling */
 .prose {
-  color: #E0E0E0;
+  color: var(--foreground);
 }
 
 .prose strong {
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--foreground);
 }
 
 .prose p {
@@ -88,72 +79,41 @@ code {
 }
 
 .prose th {
-  background-color: #2D2D2D;
+  background-color: var(--muted);
   padding: 0.75rem;
   text-align: left;
   font-weight: 600;
-  border: 1px solid #3E3E3E;
-  color: #00D9FF;
+  border: 1px solid var(--border);
 }
 
 .prose td {
   padding: 0.75rem;
-  border: 1px solid #3E3E3E;
+  border: 1px solid var(--border);
 }
 
 .prose tr:nth-child(even) {
-  background-color: #252525;
+  background-color: var(--card);
 }
 
 .prose blockquote {
-  border-left: 4px solid #00D9FF;
+  border-left: 4px solid var(--primary);
   padding-left: 1rem;
   margin: 1.5rem 0;
   font-style: italic;
-  color: #A0A0A0;
+  color: var(--muted-foreground);
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-weight: 600;
-  color: #FFFFFF;
+  font-weight: 700;
 }
 
 .prose a {
-  color: #00D9FF;
+  color: var(--primary);
   text-decoration: underline;
 }
 
 .prose a:hover {
   opacity: 0.8;
-}
-
-/* Syntax highlighting colors (Dracula-inspired) */
-.prose pre code .comment {
-  color: #6272A4;
-}
-
-.prose pre code .keyword {
-  color: #FF79C6;
-}
-
-.prose pre code .string {
-  color: #F1FA8C;
-}
-
-.prose pre code .function {
-  color: #50FA7B;
-}
-
-.prose pre code .number {
-  color: #BD93F9;
-}
-
-.prose pre code .operator {
-  color: #FF79C6;
-}
-
-.prose pre code .variable {
-  color: #8BE9FD;
 }

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Code2, FileText, Github } from "lucide-react";
+import { FileText, Github } from "lucide-react";
 
 export default function Header() {
   const handleExport = () => {
@@ -7,15 +7,15 @@ export default function Header() {
   };
 
   return (
-    <header className="border-b border-border bg-card sticky top-0 z-10">
+    <header className="border-b border-border bg-background sticky top-0 z-10">
       <div className="container flex items-center justify-between h-16">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 bg-primary flex items-center justify-center text-primary-foreground font-bold text-lg">
-            <Code2 className="w-6 h-6" />
+            X
           </div>
           <div>
             <h1 className="text-lg font-bold">Xano-Shopify OIDC Integration</h1>
-            <p className="text-xs text-muted-foreground">API Reference Documentation</p>
+            <p className="text-xs text-muted-foreground">Technical Reference Documentation</p>
           </div>
         </div>
         

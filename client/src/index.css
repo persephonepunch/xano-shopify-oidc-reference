@@ -45,51 +45,19 @@
 }
 
 :root {
-  --font-sans: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
-  --font-mono: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
   
-  /* Developer Tools Dark Mode Palette */
-  --primary: #00D9FF;
-  --primary-foreground: #1E1E1E;
-  --sidebar-primary: #00D9FF;
-  --sidebar-primary-foreground: #1E1E1E;
-  --chart-1: #00D9FF;
-  --chart-2: #BD93F9;
-  --chart-3: #50FA7B;
-  --chart-4: #FFB86C;
-  --chart-5: #FF79C6;
+  --primary: #DC2626;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #DC2626;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #DC2626;
+  --chart-2: #991B1B;
+  --chart-3: #7F1D1D;
+  --chart-4: #450A0A;
+  --chart-5: #1F1F1F;
   --radius: 0;
-  --background: #1E1E1E;
-  --foreground: #E0E0E0;
-  --card: #2D2D2D;
-  --card-foreground: #E0E0E0;
-  --popover: #2D2D2D;
-  --popover-foreground: #E0E0E0;
-  --secondary: #BD93F9;
-  --secondary-foreground: #1E1E1E;
-  --muted: #3E3E3E;
-  --muted-foreground: #A0A0A0;
-  --accent: #50FA7B;
-  --accent-foreground: #1E1E1E;
-  --destructive: #FF5555;
-  --destructive-foreground: #E0E0E0;
-  --border: #3E3E3E;
-  --input: #3E3E3E;
-  --ring: #00D9FF;
-  --sidebar: #252525;
-  --sidebar-foreground: #E0E0E0;
-  --sidebar-accent: #3E3E3E;
-  --sidebar-accent-foreground: #E0E0E0;
-  --sidebar-border: #3E3E3E;
-  --sidebar-ring: #00D9FF;
-}
-
-.light {
-  /* Light mode fallback (not used in Developer Tools design) */
-  --primary: #00D9FF;
-  --primary-foreground: #1E1E1E;
-  --sidebar-primary: #00D9FF;
-  --sidebar-primary-foreground: #1E1E1E;
   --background: #FFFFFF;
   --foreground: #000000;
   --card: #F9FAFB;
@@ -106,18 +74,48 @@
   --destructive-foreground: #FFFFFF;
   --border: #E5E7EB;
   --input: #E5E7EB;
-  --ring: #00D9FF;
-  --chart-1: #00D9FF;
-  --chart-2: #BD93F9;
-  --chart-3: #50FA7B;
-  --chart-4: #FFB86C;
-  --chart-5: #FF79C6;
+  --ring: #DC2626;
   --sidebar: #F9FAFB;
   --sidebar-foreground: #000000;
   --sidebar-accent: #F3F4F6;
   --sidebar-accent-foreground: #111827;
   --sidebar-border: #E5E7EB;
-  --sidebar-ring: #00D9FF;
+  --sidebar-ring: #DC2626;
+}
+
+.dark {
+  --primary: #DC2626;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #DC2626;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --card: #1F1F1F;
+  --card-foreground: #FFFFFF;
+  --popover: #1F1F1F;
+  --popover-foreground: #FFFFFF;
+  --secondary: #2D2D2D;
+  --secondary-foreground: #E5E7EB;
+  --muted: #2D2D2D;
+  --muted-foreground: #9CA3AF;
+  --accent: #2D2D2D;
+  --accent-foreground: #F9FAFB;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #3F3F3F;
+  --input: #3F3F3F;
+  --ring: #DC2626;
+  --chart-1: #DC2626;
+  --chart-2: #991B1B;
+  --chart-3: #7F1D1D;
+  --chart-4: #450A0A;
+  --chart-5: #1F1F1F;
+  --sidebar: #1F1F1F;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #2D2D2D;
+  --sidebar-accent-foreground: #F9FAFB;
+  --sidebar-border: #3F3F3F;
+  --sidebar-ring: #DC2626;
 }
 
 @layer base {
@@ -145,8 +143,8 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -155,8 +153,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .flex {
@@ -166,8 +164,8 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
   }
 
@@ -175,7 +173,7 @@
     .container {
       padding-left: 2rem;
       padding-right: 2rem;
-      max-width: 1400px;
+      max-width: 1280px;
     }
   }
   
@@ -186,7 +184,6 @@
   .prose code {
     @apply bg-muted px-1 py-0.5 text-sm;
     font-family: var(--font-mono);
-    color: #50FA7B;
   }
   
   .prose pre {
@@ -195,6 +192,5 @@
   
   .prose pre code {
     @apply bg-transparent p-0;
-    color: #E0E0E0;
   }
 }
